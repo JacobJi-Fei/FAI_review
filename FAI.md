@@ -622,7 +622,7 @@ Domain knowledge 就是用在 h(n)中
 
 		- If the heuristic is admissible
 
-			- Admissible: the heuristic must never over estimate the cost to reach the goal
+			- ！！！Admissible: the heuristic must never over estimate the cost to reach the goal
 
 				- ­h(n): a valid lower bound on cost to the goal
 
@@ -780,8 +780,403 @@ Domain knowledge 就是用在 h(n)中
 
 ### How is a game represented as a search problem?
 
-- The different states of the game are represented by nodes in the game tree, very similar to the above planning problems.
+- The different states of the game are represented by nodes in the game tree,
 
-## 分支主题 4
+## Neural Network
+
+### Artificial Neural Network
+
+### Simulating, on a computer, what we understand about neural networks in the brain在计算机上模拟我们所了解的在大脑中的自然网络
+
+### The first neural network
+
+- 1943, McCulloch and Pitts
+- Consists of
+
+	- A set of inputs
+
+		- dendrites 树突
+
+	- A set of resistances/weights 权重
+
+		- synapses 突触
+
+	- A processing element
+
+		- neuron 神经元
+
+	- A single output
+
+		- axon轴突
+
+### Three different classes of network architectures
+
+- single-layer feed-forward
+- multi-layer feed-forward
+-  recurrent
+
+### perceptron（感知器）
+single layer NN
+
+- Linear Separability
+
+	- Functions which can be separated in this way are called linearly separable
+线性可分函数
+	- Only linearly Separable functions can be represented by a single layer NN (perceptron)
+只有线性可分函数可以用单层NN表示
+
+- Representation
+- Limitations (linearly separable)
+- Learning
+- Threshold 阈值
+
+## Machine Learning
+
+### Machine Learning relates with the study, design and development of the algorithms that give computers the capability to learn without being explicitly programmed
+-- Arthur Samuel
+
+### Data
+
+- Machine learning‒ computer learns from data, which represents “past experiences” of an application domain
+- Learn from examples
+
+	- a machine learning algorithm then takes these examples and produces a program that does the job 
+
+### Process
+
+- Training set
+
+	- Learning the parameters of the model
+
+- Test set
+
+	- How the results will generalize to an independent (novel) data set
+
+### Supervised learning
+
+- the agent observes some example input- output pairs and learns a function that maps from input to output
+
+	- 就是我从这个trainning test learning之后 我给一个input 他就能对应给出确定的结果
+
+- Classification
+
+	- (output) y is discrete (class labels). Learn a decision boundary that separates one class from another
+
+- Regression
+
+	- y is continuous, e.g. linear regression. Learn a continuous input-output mapping,
+
+- Example
+
+	- 识别出图像是，什么比如🐱 🐶 🚗 🏠
+	- 一个用户会给哪家餐馆评分吗
+	- 这个是垃圾邮件吗
+	- what will be the sales, stock price next year
+
+### Unsupervised learning
+
+- given only samples x of the data, infers a function f such that y = f(x) describes the hidden structure of the unlabeled data - more of an exploratory/descriptive data analysis
+
+	- 能描述出来没有标记的数据结构，探索新的数据分析
+
+- Clustering 聚集，分类归类
+
+	- y is discrete. Learn any intrinsic structure that is present in the data. 了解数据中存在任何的数据结构
+
+- Dimensional Reduction 数据降纬
+
+	-  y is continuous. Discover a lower- dimensional surface on which the data lives 发现数据所在的低纬表面？
+
+### ML Application
+
+- CV
+
+	- Image tagging
+	-  Self-driving car
+	-  Image pattern recognition
+
+- Text Analysis
+
+	- Spam filtering
+	-  Information extraction
+
+- Video Games & Robotics
+
+	- Checker/chess/go
+
+- Data Mining 数据挖掘
+
+### Data Mining
+
+- Introduction
+
+	- the exploration and analysis of large quantities of data in order to discover valid, novel, potentially useful, and ultimately understandable patterns in data.
+
+		- Valid: hod on new data with some certainty
+		- Novel: non-obvious to the system
+		- Useful: should be possible to act on the item
+		- Understandable： humans should be able to interpret the pattern
+
+- purpose
+
+	- explains patterns
+	- predicts with models (Machine learning)
+
+- Why data mining
+
+	- Banking: loan/credit card approval
+	- Fraud detection: network security, financial transactions
+
+		- use historical data to build models of fraudulent behavior and use data mining to help identify similar instances
+
+	- Customer relationship management
+	- Medicine: disease outcome, effectiveness of treatments
+	- Astronomy: scientific data analysis
+	- Web site design and promotion:
+
+- Tasks
+
+	- Predictive
+
+		- use some variables to predict unknown or future values of other variables
+
+			- Classification
+
+				- Identify to which set a new observation belongs
+
+					- 找observation 属于哪一个set
+
+						- 说白了一个东西扔进对应类里
+
+	- Descriptive
+
+		- Find human-interpretable patterns that describe the data
+
+			- Clustering
+
+				- Group a set of objects so objects in the same cluster are more similar
+
+					- 将 一系列objects聚集在一起，使得这一聚类的objects 更相似
+
+						- 把一堆东西分成几堆相似的放一块
+
+			- Association rule discovery
+
+				- Discover interesting relations between variables in large databases
+
+					- 在一个大的数据库里找到变量间有意思的关系
+
+				- Identify rules using some measures
+
+					- 找到这个关系的规则
+
+### Classification (Supervised learning)
+
+- Learn a method to predict the instance class from pre-labeled( classified) instance
+- Approaches
+
+	- Regression
+	- Decision Trees
+
+		- Pros
+
+			- Reasonable training time
+			- Can handle large number of attributes
+			- Easy to implement
+			- Easy to interpret
+			- 训练时间reasonable， 可以解决大数量的attributes，方便展示，方便说明
+
+		- Cons
+
+			- Simple decision boundaries
+			- Problems with lots of missing data
+			- Cannot handle complicated relationship between
+			- 决策边界简单，大量数据缺失会出现问题，无法处理复杂的数据关系
+
+	- Neural Networks
+
+		- Pros
+
+			- Can learn more complicated class boundaries
+			- Can be more accurate
+			- Can handle large number of features
+			- 可以学习更复杂的分类边界， 可以更准确， 可以解决大数量features 的问题
+
+		- Cons
+
+			- Hard to implement: trial and error for choosing parameters 
+			- Slow training time
+			- Can over-fit the data : find patterns in random noise
+			- Hard to interpret
+			- 很难展示，很慢的训练时间， 和数据过度拟合，很难去说明
+
+- Data
+
+	- a collection of records
+
+		- Each record contains a set of attributes
+		- One of the attributes is the class attribute
+
+- Goal
+
+	- assign a class to unseen records correctly
+
+- Process
+
+	- Divide the given data set into training & test sets
+	- Use training set to build the model
+	- y test set to validate the model
+	- 将数据集分开，训练集用来得出模型，将这个模型放到测试集里测试一下
+
+- Application
+
+	- Target marketing
+
+		- Goal: Reduce cost of mailing by targeting consumers who are likely to buy a new cell-phone product
+
+- KNN （ K-Nearest neighbor)
+
+	- One of the first choices for a classification study when there is little or no prior knowledge about the distribution of the data.
+
+		- classification study 首选
+
+### Clustering ( unsupervised learning)
+
+- Task
+
+	- to partition the data so the instances are grouped in similar items by using distance/similarity measure
+
+		- 分区数据
+
+- Introduction
+
+	- A set of data points, each with a set of attributes and a similarity measure, find clusters such that
+每个都有一组属性和相似性度量，找到这样的聚类
+
+		- Data points in one cluster are more similar
+		- Data points in separate clusters are less similar to one another
+
+	- Key
+
+		- Measure of similarity between instances
+
+			- Euclidean or Manhattan distance
+
+				- Euclidean: 两点之间距离
+				- Manhattan： 两直角边距离和
+
+			- Hamming distance
+			- Other problem specific measures
+
+- Method
+
+	- Partitioning-based clustering
+
+		- K-means clustering
+		-  K-medoids clustering
+
+	- Density-based clustering
+基于密度的聚类
+
+		-  Separate regions of dense points by sparser regions of relatively low density
+
+- K-Means
+
+	- Goal
+
+		- minimise sum of square of distance
+
+			- Between each point and centers of the cluster.
+
+				- 点到中心点间
+
+			- Between each pair of points in the cluster
+
+				- 每一对点间
+
+- Density-based clustering
+
+	-  A cluster: a connected dense component
+	- Density: the number of neighbors of a point
+	- Can find clusters of arbitrary shape
+	- 把dense component 链接起来
+
+- Application
+
+	- Market Segmentation
+
+		- Goal: divide a market into distinct subsets of customers, any subset may be a market target
+
+			- 将市场划分为不同的客户群
+
+		- Approach
+
+			- Collect different attributes of customers, based on their related information (lifestyle, etc.)
+			- Find clusters of similar customers
+			- Evaluate buying patterns in the same cluster vs. those from different clusters
+
+### Associate rules
+
+- Associate Rule Discovery
+
+	- discover interesting relations between variables in large databases
+	- Shopping cart filled with several items
+
+		- 比如一个人买了鸡蛋 他一定会买牛奶吗， 或者说 这个购物车里他有牛奶的可能性是多少
+
+	- Association rules
+
+		- 60% of customers who purchase X and Y also buy Z
+
+	- Sequential patterns
+次序模式
+
+		- 40% of customers who first buy X also purchase Y within three weeks
+
+			- 有一定顺序性
+
+- Goal
+
+	- identify items bought together by many customers
+
+- Approach
+
+	- Process data collected with barcode scanners  Find dependencies among items
+
+- A classic rule
+
+	- If a customer buys diaper & milk, then he is very likely to buy beer
+
+## Probabilistic Reasoning and Bayes' Theorem
+
+### Probability Theory
+
+- Overview
+
+	- Basic Concepts
+
+		- A probability model is a mathematical representation, defined by its sample space S, events A within the sample space, and probabilities P(A)
+		-  basic rules of probability 
+
+			- Rule 1: Any probability P(A) is number between 0 and 1 (0 ≤ P(A) ≤ 1)
+			-  Rule 2: The probability of the sample space S is always equal to 1 (P(S) = 1)
+			- Rule 3: If two events A and B are disjoint, the probability of either event is the sum of probabilities of two events P(A or B) = P(A) + P(B)
+			- Rule4:P(Ac)=1–P(A)
+			- Rule 5: If two events are independent, then the probability of both events happening is the product of probabilities of each event: P(A and B) = P(A)P(B)
+			- Rule6:P(AVB )=P(A)+P(B)–P(A^𝑩)
+
+- Disjoint
+
+	-  If two events have no outcome in common, they are called disjoint.
+
+- Independence
+
+	- Consider the coin flipping event, flip the coin two times, what the probability of getting “head”s. The outcome of the 1st event (1st flip) has no effect on the probability of the 2nd event (2nd flip), then the two events are independent.
+
+### THE JOINT PROBABILITY DISTRIBUTION
+
+- Joint probabilities can be between any number of variables
+- For each combination of variables, we can show how probable that combination is
+- The probabilities of these combinations need to sum to 1
 
 *XMind - Trial Version*
